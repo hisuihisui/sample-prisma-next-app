@@ -22,7 +22,7 @@ export default function AddUser() {
     }
 
     // APIのURL
-    const url = "http://127.0.0.1:3000/api/user";
+    const url = "http://localhost:3000/api/user";
     // リクエストパラメータ
     const params = {
       method: "POST",
