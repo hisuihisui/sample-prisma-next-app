@@ -12,7 +12,14 @@ export async function GET() {
     },
   });
 
-  console.log(userArray)
+  console.log(
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    },
+    userArray
+  );
 
   // Response を jsonで返す
   return NextResponse.json(userArray);
