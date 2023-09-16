@@ -3,7 +3,7 @@ export default async function UserList() {
   const url = "http://" + process.env.VERCEL_URL + "/api/user";
   // APIへリクエスト
   const res = await fetch(url);
-  console.log(res)
+  console.log(res.body)
   // レスポンスボディを取り出す
   const data = await res.json();
 
