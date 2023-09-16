@@ -22,7 +22,10 @@ export default function AddUser() {
     }
 
     // APIのURL
-    const url = process.env.NEXT_PUBLIC_API_URL + "/api/user";
+    const url =
+      process.env.NEXT_PUBLIC_API_PREFIX +
+      process.env.NEXT_PUBLIC_VERCEL_URL +
+      "/api/user";
     // リクエストパラメータ
     const params = {
       method: "POST",
