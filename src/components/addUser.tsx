@@ -4,6 +4,8 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+import { config } from "@/lib/config";
+
 export default function AddUser() {
   const router = useRouter();
 
@@ -22,10 +24,7 @@ export default function AddUser() {
     }
 
     // APIのURL
-    const url =
-      process.env.NEXT_PUBLIC_API_PREFIX +
-      process.env.NEXT_PUBLIC_VERCEL_URL +
-      "/api/user";
+    const url = config.apiPrefix + config.apiHost + "/api/user";
     // リクエストパラメータ
     const params = {
       method: "POST",

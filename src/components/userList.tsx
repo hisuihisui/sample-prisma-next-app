@@ -1,9 +1,8 @@
+import { config } from "@/lib/config";
+
 export default async function UserList() {
   // APIのURL
-  const url =
-    process.env.NEXT_PUBLIC_API_PREFIX +
-    process.env.NEXT_PUBLIC_VERCEL_URL +
-    "/api/user";
+  const url = config.apiPrefix + config.apiHost + "/api/user";
   // APIへリクエスト
   const res = await fetch(url, {
     cache: "no-store",
