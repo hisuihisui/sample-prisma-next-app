@@ -8,7 +8,7 @@ export default async function UserList() {
     cache: "no-store",
   });
 
-  // try {
+  try {
     // レスポンスボディを取り出す
     const { data } = await res.json();
 
@@ -27,7 +27,7 @@ export default async function UserList() {
         ))}
       </div>
     );
-  // } catch {
-  //   return <div></div>;
-  // }
+  } catch {
+    return <div></div>;
+  }
 }
