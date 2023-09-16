@@ -1,10 +1,11 @@
 export default async function UserList() {
   // APIのURL
-  const url = "http://" + process.env.VERCEL_URL + "/api/user";
-  console.log(url);
+  const url = "http://" + process.env.NEXT_PUBLIC_VERCEL_URL + "/api/user";
   // APIへリクエスト
-  const res = await fetch(url);
-  console.log(res.body)
+  const res = await fetch(url, {
+    cache: "no-store",
+  });
+  // console.log(res.json());
   // レスポンスボディを取り出す
   const data = await res.json();
 
