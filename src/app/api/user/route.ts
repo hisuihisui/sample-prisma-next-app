@@ -12,6 +12,8 @@ export async function GET() {
     },
   });
 
+  console.log(userArray)
+
   // Response を jsonで返す
   return NextResponse.json(userArray);
 }
