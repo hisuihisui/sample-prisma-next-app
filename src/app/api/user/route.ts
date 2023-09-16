@@ -12,14 +12,18 @@ export async function GET() {
     },
   });
 
-
-  // Response を jsonで返す
-  return NextResponse.json({
+  const res = NextResponse.json({
     headers: {
       "Content-Type": "application/json",
     },
     data: userArray,
   });
+
+  console.log(res);
+  console.log(res.json());
+
+  // Response を jsonで返す
+  return res;
 }
 
 export async function POST(req: NextRequest) {

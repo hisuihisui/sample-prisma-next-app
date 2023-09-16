@@ -5,7 +5,7 @@ export default async function UserList() {
   const res = await fetch(url, {
     cache: "no-store",
   });
-  console.log(res.headers);
+  console.log(res.body);
   // レスポンスボディを取り出す
   const { data } = await res.json();
 
@@ -14,15 +14,12 @@ export default async function UserList() {
       <h2>All Users</h2>
       {data.map((user: any, index: any) => (
         <div key={index}>
-          <span>Name: {user.name}</span> <span>Email: {user.email}</span>{" "}
+          <span>Name: {user.name}</span>
+          <span>Email: {user.email}</span>
           <span>
-            Posts:
-            {user.posts.map((value: any) => `${value.title},`)}
-          </span>{" "}
-          <span>
-            Profile:
-            {user.profile?.bio}
+            Posts: {user.posts.map((value: any) => `${value.title},`)}
           </span>
+          <span>Profile: {user.profile?.bio}</span>
         </div>
       ))}
     </div>
