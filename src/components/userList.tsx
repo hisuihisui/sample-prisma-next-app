@@ -5,7 +5,7 @@ export default async function UserList() {
   const res = await fetch(url, {
     cache: "no-store",
   });
-  console.log(res.body);
+  console.log(res);
   // レスポンスボディを取り出す
   const { data } = await res.json();
 

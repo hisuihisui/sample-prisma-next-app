@@ -19,9 +19,6 @@ export async function GET() {
     data: userArray,
   });
 
-  console.log(res);
-  console.log(res.json());
-
   // Response を jsonで返す
   return res;
 }
