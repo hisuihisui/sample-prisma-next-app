@@ -7,16 +7,22 @@ export default async function UserList() {
   });
   console.log(res.headers);
   // レスポンスボディを取り出す
-  const data = await res.json();
+  const { data } = await res.json();
 
   return (
     <div>
       <h2>All Users</h2>
       {data.map((user: any, index: any) => (
         <div key={index}>
-          Name: {user.name} Email: {user.email} Posts:
-          {user.posts.map((value: any) => `${value.title},`)} Profile:
-          {user.profile?.bio}
+          <span>Name: {user.name}</span> <span>Email: {user.email}</span>{" "}
+          <span>
+            Posts:
+            {user.posts.map((value: any) => `${value.title},`)}
+          </span>{" "}
+          <span>
+            Profile:
+            {user.profile?.bio}
+          </span>
         </div>
       ))}
     </div>
