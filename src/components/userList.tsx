@@ -10,7 +10,7 @@ export default async function UserList() {
 
   try {
     // レスポンスボディを取り出す
-    const { data } = await res.json();
+    const data = await res.json();
 
     return (
       <div>
