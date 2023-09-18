@@ -16,7 +16,7 @@ const nextConfig = {
           },
           {
             key: "Access-Control-Allow-Headers",
-            value: "XContent-Type",
+            value: "Content-Type",
           },
         ],
       },
